@@ -14,7 +14,7 @@ module.exports = {
       "method": "shell.run",
       "params": {
 //        "conda": "https://github.com/pinokio/cu121.git/env",
-        "venv": "{{args && args.env ? args.env : null}}",
+        "venv": "{{args && args.venv ? args.venv : null}}",
         "message": "pip install torch torchvision torchaudio {{args && args.xformers ? 'xformers' : ''}}  --index-url https://download.pytorch.org/whl/cu121"
       }
     },
@@ -23,7 +23,7 @@ module.exports = {
       "when": "{{platform === 'win32' && gpu === 'amd'}}",
       "method": "shell.run",
       "params": {
-        "venv": "{{args && args.env ? args.env : null}}",
+        "venv": "{{args && args.venv ? args.venv : null}}",
         "message": "pip install torch-directml"
       }
     },
@@ -32,7 +32,7 @@ module.exports = {
       "when": "{{platform === 'win32' && (gpu !== 'nvidia' && gpu !== 'amd')}}",
       "method": "shell.run",
       "params": {
-        "venv": "{{args && args.env ? args.env : null}}",
+        "venv": "{{args && args.venv ? args.venv : null}}",
         "message": "pip install torch torchvision torchaudio"
       }
     },
@@ -41,7 +41,7 @@ module.exports = {
       "when": "{{platform === 'darwin'}}",
       "method": "shell.run",
       "params": {
-        "venv": "{{args && args.env ? args.env : null}}",
+        "venv": "{{args && args.venv ? args.venv : null}}",
         "message": "pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cpu"
       }
     },
@@ -50,7 +50,7 @@ module.exports = {
       "when": "{{platform === 'linux' && gpu === 'nvidia'}}",
       "method": "shell.run",
       "params": {
-        "venv": "{{args && args.env ? args.env : null}}",
+        "venv": "{{args && args.venv ? args.venv : null}}",
         "message": "pip install torch torchvision torchaudio {{args && args.xformers ? 'xformers' : ''}}"
       }
     },
@@ -59,7 +59,7 @@ module.exports = {
       "when": "{{platform === 'linux' && gpu === 'amd'}}",
       "method": "shell.run",
       "params": {
-        "venv": "{{args && args.env ? args.env : null}}",
+        "venv": "{{args && args.venv ? args.venv : null}}",
         "message": "pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm5.7"
       }
     },
@@ -68,7 +68,7 @@ module.exports = {
       "when": "{{platform === 'linux' && (gpu !== 'amd' && gpu !=='amd'}}",
       "method": "shell.run",
       "params": {
-        "venv": "{{args && args.env ? args.env : null}}",
+        "venv": "{{args && args.venv ? args.venv : null}}",
         "message": "pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu"
       }
     }
