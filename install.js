@@ -10,7 +10,7 @@ module.exports = {
 //    },
     // windows nvidia
     {
-      "when": "{{platform === 'win32' && gpu === 'nvidia'}},
+      "when": "{{platform === 'win32' && gpu === 'nvidia'}}",
       "method": "shell.run",
       "params": {
 //        "conda": "https://github.com/pinokio/cu121.git/env",
@@ -20,7 +20,7 @@ module.exports = {
     },
     // windows amd
     {
-      "when": "{{platform === 'win32' && gpu === 'amd'}},
+      "when": "{{platform === 'win32' && gpu === 'amd'}}",
       "method": "shell.run",
       "params": {
         "venv": "{{args && args.env ? args.env : null}}",
@@ -29,7 +29,7 @@ module.exports = {
     },
     // windows cpu
     {
-      "when": "{{platform === 'win32' && (gpu !== 'nvidia' && gpu !== 'amd')}},
+      "when": "{{platform === 'win32' && (gpu !== 'nvidia' && gpu !== 'amd')}}",
       "method": "shell.run",
       "params": {
         "venv": "{{args && args.env ? args.env : null}}",
