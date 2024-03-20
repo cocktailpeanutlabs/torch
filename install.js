@@ -42,7 +42,7 @@ module.exports = {
       "method": "shell.run",
       "params": {
         "venv": "{{args && args.venv ? args.venv : null}}",
-        "message": "pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cpu"
+        "message": "pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cpu"
       }
     },
     // linux nvidia
@@ -60,7 +60,7 @@ module.exports = {
       "method": "shell.run",
       "params": {
         "venv": "{{args && args.venv ? args.venv : null}}",
-        "message": "pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm5.7"
+        "message": "pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm5.7"
       }
     },
     // linux cpu
@@ -69,7 +69,7 @@ module.exports = {
       "method": "shell.run",
       "params": {
         "venv": "{{args && args.venv ? args.venv : null}}",
-        "message": "pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu"
+        "message": "pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu"
       }
     }
   ]
